@@ -1,0 +1,15 @@
+{
+  "name": "api.mangara",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1",
+    "htmlparser2": "^7.1.2"
+  },
+  "scripts": {
+    "serve": "nodemon ./index.js"
+  }
+}
