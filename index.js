@@ -9,38 +9,40 @@ var url = 'https://bacakomik.co'
 
 const handle = async (req,res) => {
 
-	await axios.get(url+'/komik-terbaru').then(re => {
+	// await axios.get(url+'/komik-terbaru').then(re => {
 
-		if(re.status != 200){
-			return res.status(403).json({
-				status: false,
-				message: 'Server error'
-			})
-		}
+	// 	if(re.status != 200){
+	// 		return res.status(403).json({
+	// 			status: false,
+	// 			message: 'Server error'
+	// 		})
+	// 	}
 
-		console.error('status OK')
-		console.log('status OK')
+	// 	console.error('status OK')
+	// 	console.log('status OK')
 
-		let $ = parser.load(re.data)
+	// 	let $ = parser.load(re.data)
 
-		let $manga = [];
+	// 	let $manga = [];
 
-		$('.animposx').each(function(i){
-			$manga.push({
-				title: $(this).find('.tt h4').text(),
-				cover: $(this).find('.limit img').attr('src'),
-				slug: $(this).find('a').attr('href')
-			});
-		});
+	// 	$('.animposx').each(function(i){
+	// 		$manga.push({
+	// 			title: $(this).find('.tt h4').text(),
+	// 			cover: $(this).find('.limit img').attr('src'),
+	// 			slug: $(this).find('a').attr('href')
+	// 		});
+	// 	});
 
 
-		res.status(200).json({
-			status: 'SUCCESS',
-			data: $manga
-		})
-	}).catch(er => {
-		console.log(er)
-	})
+	// 	res.status(200).json({
+	// 		status: 'SUCCESS',
+	// 		data: $manga
+	// 	})
+	// }).catch(er => {
+	// 	console.log(er)
+	// })
+
+	res.status(200).json('ok')
 }
 
 app.get('/', handle)
