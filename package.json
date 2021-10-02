@@ -10,6 +10,7 @@
     "htmlparser2": "^7.1.2"
   },
   "scripts": {
-    "serve": "nodemon ./index.js"
+    "serve": "nodemon ./index.js",
+    "start": "node ./index.j"
   }
 }
