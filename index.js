@@ -18,6 +18,9 @@ const handle = async (req,res) => {
 			})
 		}
 
+		console.error('status OK')
+		console.log('status OK')
+
 		let $ = parser.load(re.data)
 
 		let $manga = [];
