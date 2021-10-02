@@ -23,9 +23,6 @@ const handle = async (req,res) => {
 		let $manga = [];
 
 		$('.animposx').each(function(i){
-
-			console.log('k')
-
 			$manga.push({
 				title: $(this).find('.tt h4').text(),
 				cover: $(this).find('.limit img').attr('src'),
@@ -45,4 +42,6 @@ const handle = async (req,res) => {
 
 app.get('/', handle)
 
-app.listen(3000, () => console.log('Server running on PORT: 3000'))
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log('Server running on PORT:' + port))
